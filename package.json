@@ -1,0 +1,7 @@
+{
+  "name": "probe-plan", "version": "0.1.0", "private": true, "type": "module",
+  "description": "Local-first all-pairs check-kit compiler for disconnected wire-only assemblies",
+  "engines": {"node": ">=22"},
+  "scripts": {"test": "node --test tests/*.test.mjs", "build": "node scripts/build.mjs", "serve": "node scripts/serve.mjs", "check": "node scripts/check.mjs && npm test && npm run build", "test:browser": "node tests/browser/browser-test.mjs", "package": "node scripts/package.mjs"},
+  "devDependencies": {"@playwright/test": "1.56.0"}
+}
