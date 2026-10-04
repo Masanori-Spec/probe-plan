@@ -100,7 +100,7 @@ The binding is the **complete canonical map JSON**, not the short visual referen
 
 The 8-digit display reference is a non-cryptographic convenience label. It is not a signature, a unique global ID, or a tamper-proof audit trail. Anyone can edit both a saved map and its binding or invent manual records. There are no identities, timestamps, calibration records, provenance signatures, or measured evidence.
 
-Exports are deterministic for a given validated session and export language. JSON and CSV values remain language-independent. CSV prefixes formula-like cells with an apostrophe and quotes every cell; that protection intentionally changes formula-leading display values. HTML/SVG escape user-controlled markup. Reports contain no scripts or external assets. Very long SVG labels are font-size fitted, not silently truncated.
+Exports are deterministic for a given validated session and export language. JSON and CSV values remain language-independent. CSV prefixes formula-like cells with an apostrophe and quotes every cell; that protection intentionally changes formula-leading display values. HTML/SVG escape user-controlled markup. Reports contain no scripts or external assets. Very long SVG labels use reduced font size and explicit SVG textLength containment. Full text is retained; ordinary labels keep their original typography.
 
 ## Architecture and tests
 
@@ -115,7 +115,7 @@ Exports are deterministic for a given validated session and export language. JSO
 
 The independent oracle enumerates all set partitions for 2–7 pins and compares every intended partition against every physical-partition model of the same size: **813,296 comparisons**. This verifies the abstract equivalence-relation model only, not the real-world behavior of cables or meters.
 
-Current local evidence: **94 / 94 Node tests passed**, syntax/no-network guard passed, and static build passed. Browser scenarios are authored for CI but have **not been executed in the development environment**. Screenshots, responsive behavior, print rendering, and browser workflow claims still require the sandboxed browser run. See [verification](docs/verification.md).
+Current local evidence: **95 / 95 Node tests passed**, syntax/no-network guard passed, and static build passed. Browser scenarios are authored for CI but have **not been executed in the development environment**. Screenshots, responsive behavior, print rendering, and browser workflow claims still require the sandboxed browser run. See [verification](docs/verification.md).
 
 ## Deliberate limits
 

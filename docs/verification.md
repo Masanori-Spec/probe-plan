@@ -6,7 +6,7 @@ As of 2026-10-04:
 
 - Node.js v24.19.0
 - `npm run check`: passed
-- 94 / 94 Node tests: passed, including 62 independently authored oracle/adversarial tests
+- 95 / 95 Node tests: passed, including 62 independently authored oracle/adversarial tests
 - 813,296 ideal partition comparisons through seven pins
 - 32-pin / 496-pair maximum boundary
 - A 554,605-byte Unicode/escape-heavy session round-trip

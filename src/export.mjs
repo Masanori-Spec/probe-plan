@@ -5,8 +5,12 @@ const labels = {
   en:{scope:'Only isolated, disconnected wire-only passive assemblies. No mains, batteries, components or safety-critical use.',proof:'User-recorded results only. No measured evidence, electrical certification, thresholds, or hardware control.',diagram:'Pin reference · logical grouping, NOT connector face orientation',unused:'ISOLATED',connected:'CONNECTED',other:'NOT CONNECTED',untested:'Untested',pass:'User pass',fail:'User fail',skipped:'Skipped',manual:'Manual check record',expect:'Expected',result:'User record',note:'Note',pair:'Pair',pins:'Declared pins',net:'Net',blank:'No record',status:'Recording summary',full:'Full all-pairs plan',ref:'Map reference',version:'ProbePlan format v1',print:'Print this document using your browser. No links or scripts are required.'},
   ja:{scope:'完全に切り離された、配線のみの無通電アセンブリ専用。商用電源・電池・部品・安全に関わる用途には使用不可。',proof:'結果は手入力の記録です。実測の証拠・電気的な認証・しきい値の設定・機器制御は提供しません。',diagram:'ピン参照表 · 論理グループです。コネクタ正面の向きは示しません',unused:'単独・未接続',connected:'接続あり',other:'接続なし',untested:'未記録',pass:'手入力：一致',fail:'手入力：不一致',skipped:'スキップ',manual:'手動チェック記録',expect:'期待する関係',result:'手入力結果',note:'メモ',pair:'ペア',pins:'宣言ピン',net:'ネット',blank:'記録なし',status:'記録の概要',full:'全ペアの確認リスト',ref:'マップ参照',version:'ProbePlan 形式 v1',print:'ブラウザの印刷機能で印刷できます。外部リンク・スクリプトは不要です。'}
 };
-// Shrink the font conservatively; never stretch ordinary labels to fill a column.
-const fit = (value,width,font=12) => ` font-size="${Math.min(font,width/(value.length*1.1)).toFixed(3)}" data-fit-width="${width}"`;
+// Normal labels keep their typography. For long labels, explicit SVG geometry
+// bounds fallback-font glyphs instead of trusting a font-metric estimate alone.
+const fit = (value,width,font=12) => {
+  const fitted=value.length*font*1.1>width;
+  return ` font-size="${Math.min(font,width/(value.length*1.1)).toFixed(3)}"${fitted ? ` textLength="${width}" lengthAdjust="spacingAndGlyphs"` : ''} data-fit-width="${width}"`;
+};
 const lex = language => Object.hasOwn(labels,language) ? labels[language] : labels.en;
 export function toJSON(input) { return JSON.stringify(validateSession(input),null,2)+'\n'; }
 export function toCSV(input) {
@@ -24,7 +28,7 @@ export function toSVG(input,language='en') {
     cards.push(`<g><rect x="${x}" y="${y}" width="454" height="${h}" rx="12" fill="#ffffff" stroke="#c6d2cc"/><text x="${x+20}" y="${y+28}" font-weight="700"${fit(c.id,410,18)}>${e(c.id)}</text><text x="${x+20}" y="${y+50}" ${fit(c.label,410)}>${e(c.label)}</text><text x="${x+20}" y="${y+75}" font-size="11" fill="#53675d">PIN</text><text x="${x+226}" y="${y+75}" font-size="11" fill="#53675d">${e(t.net)}</text>${c.pins.map((pin,i)=>`<g><line x1="${x+20}" x2="${x+434}" y1="${y+86+i*33}" y2="${y+86+i*33}" stroke="#e4eae5"/><circle cx="${x+25}" cy="${y+104+i*33}" r="4" fill="${membership.has(pinKey({connector:c.id,pin}))?'#146749':'#8d978f'}"/><text x="${x+42}" y="${y+109+i*33}" ${fit(pin,165)}>${e(pin)}</text><text x="${x+226}" y="${y+109+i*33}" ${fit(membership.get(pinKey({connector:c.id,pin})) ?? t.unused,188)}>${e(membership.get(pinKey({connector:c.id,pin})) ?? t.unused)}</text></g>`).join('')}</g>`);
   });
   const height=Math.max(...positions)+30;
-  // Bounded font sizes retain the full label text without stretching short strings.
+  // Fitted labels retain every character; short labels do not receive textLength.
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 ${height}" role="img" aria-labelledby="probeplan-reference-title probeplan-reference-desc"><title id="probeplan-reference-title">${e(s.map.title)} — ${e(t.diagram)}</title><desc id="probeplan-reference-desc">${e(t.scope)} ${e(t.proof)}</desc><rect width="1000" height="${height}" fill="#f4f6ef"/><g font-family="Arial, sans-serif" fill="#163e2e"><text x="32" y="35" font-size="14" font-weight="700">PROBEPLAN / ${e(referenceCode(s.binding))}</text><text x="32" y="68" ${fit(s.map.title,936,22)}>${e(s.map.title)}</text><text x="32" y="94" font-size="13">${e(t.diagram)}</text><text x="32" y="121" font-size="11">${e(t.scope)}</text><text x="32" y="144" font-size="11">${e(t.proof)}</text>${cards.join('')}</g></svg>\n`;
 }
 export function toHTML(input,language='en') {
