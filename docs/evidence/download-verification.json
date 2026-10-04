@@ -1,0 +1,10 @@
+{
+  "pairs": 21,
+  "expectedConnected": 6,
+  "expectedNotConnected": 15,
+  "CSVRecordsMatchJSON": true,
+  "HTMLTableRows": 21,
+  "noScriptsOrExternalAssets": true,
+  "SVGScopeRetained": true,
+  "passed": true
+}

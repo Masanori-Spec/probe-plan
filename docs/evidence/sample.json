@@ -1,0 +1,184 @@
+{
+  "schema": "probeplan.session.v1",
+  "map": {
+    "schema": "probeplan.pinmap.v1",
+    "title": "Bench sample · Y branch",
+    "connectors": [
+      {
+        "id": "J1",
+        "label": "Source end · labels only",
+        "pins": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "id": "J2",
+        "label": "Branch A · labels only",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "J3",
+        "label": "Branch B · labels only",
+        "pins": [
+          "1",
+          "2"
+        ]
+      }
+    ],
+    "nets": [
+      {
+        "id": "LINE_A",
+        "pins": [
+          {
+            "connector": "J1",
+            "pin": "1"
+          },
+          {
+            "connector": "J2",
+            "pin": "1"
+          },
+          {
+            "connector": "J3",
+            "pin": "1"
+          }
+        ]
+      },
+      {
+        "id": "LINE_B",
+        "pins": [
+          {
+            "connector": "J1",
+            "pin": "2"
+          },
+          {
+            "connector": "J2",
+            "pin": "2"
+          },
+          {
+            "connector": "J3",
+            "pin": "2"
+          }
+        ]
+      }
+    ],
+    "unused": [
+      {
+        "connector": "J1",
+        "pin": "3"
+      }
+    ]
+  },
+  "binding": "{\"schema\":\"probeplan.pinmap.v1\",\"title\":\"Bench sample · Y branch\",\"connectors\":[{\"id\":\"J1\",\"label\":\"Source end · labels only\",\"pins\":[\"1\",\"2\",\"3\"]},{\"id\":\"J2\",\"label\":\"Branch A · labels only\",\"pins\":[\"1\",\"2\"]},{\"id\":\"J3\",\"label\":\"Branch B · labels only\",\"pins\":[\"1\",\"2\"]}],\"nets\":[{\"id\":\"LINE_A\",\"pins\":[{\"connector\":\"J1\",\"pin\":\"1\"},{\"connector\":\"J2\",\"pin\":\"1\"},{\"connector\":\"J3\",\"pin\":\"1\"}]},{\"id\":\"LINE_B\",\"pins\":[{\"connector\":\"J1\",\"pin\":\"2\"},{\"connector\":\"J2\",\"pin\":\"2\"},{\"connector\":\"J3\",\"pin\":\"2\"}]}],\"unused\":[{\"connector\":\"J1\",\"pin\":\"3\"}]}",
+  "results": [
+    {
+      "pairId": "[\"J1\",\"1\",\"J1\",\"2\"]",
+      "status": "pass",
+      "note": "Synthetic observation"
+    },
+    {
+      "pairId": "[\"J1\",\"1\",\"J1\",\"3\"]",
+      "status": "fail",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"1\",\"J2\",\"1\"]",
+      "status": "skipped",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"1\",\"J2\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"1\",\"J3\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"1\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"2\",\"J1\",\"3\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"2\",\"J2\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"2\",\"J2\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"2\",\"J3\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"2\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"3\",\"J2\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"3\",\"J2\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"3\",\"J3\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J1\",\"3\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J2\",\"1\",\"J2\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J2\",\"1\",\"J3\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J2\",\"1\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J2\",\"2\",\"J3\",\"1\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J2\",\"2\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    },
+    {
+      "pairId": "[\"J3\",\"1\",\"J3\",\"2\"]",
+      "status": "untested",
+      "note": ""
+    }
+  ]
+}

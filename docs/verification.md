@@ -18,11 +18,13 @@ As of 2026-10-04:
 - Seven DOM-stub event/state tests, including superseded imports across sample, record, reset and restore flows
 - Static distribution build
 
-## Authored, not yet executed
+## Passed in hosted Chromium
 
-`tests/browser/browser-test.mjs` is authored for a sandbox-enabled Chromium environment. The development environment's local browser restrictions were respected; no browser bypass was attempted.
+[Hosted run 37170948046](https://github.com/Masanori-Spec/probe-plan/actions/runs/37170948046) passed all five jobs for source commit `5bb9c7e60bab2f0a8ace294054cc10d07d440446` on 2026-10-04. Four model jobs ran all 95 tests across Node 22/24 and UTC/Asia/Tokyo. The browser job passed all 16 scenarios with Chromium sandboxing enabled. The development environment's local browser restrictions were respected; no browser bypass was attempted.
 
-Its scenarios cover:
+The initial hosted attempt exposed an asynchronous test assertion race. Retrying state assertions and explicit dialog-closure checks fixed the harness without weakening expected states. A later run exposed long-label SVG width handling; long labels now retain all text using reduced font size plus explicit SVG textLength containment. The unchanged browser width limits pass, and measured font/bounds data is retained. Ordinary labels keep their original typography.
+
+The executed scenarios cover:
 
 - Japanese and English desktop views; 768 / 390 / 320-pixel viewport screenshots and horizontal-overflow assertions
 - Keyboard skip link, unique accessible IDs, result-filter focus movement, and modal Escape cancellation
@@ -36,7 +38,11 @@ Its scenarios cover:
 - Maximum 496-pair plan
 - No external application requests or uncaught page errors
 
-These are **planned assertions, not observed passes** until the workflow runs successfully for the exact published commit. Browser screenshots and print pagination still require review. The browser artifacts are intentionally not fabricated or included as pre-passed evidence.
+All listed scenarios passed. Desktop Japanese/English and 320/390/768-pixel responsive screenshots were visually inspected with no overlapping controls or viewport overflow. The complete exported report renders on two A4 pages; the partial-screen print renders on one A4 page with its filtered/unapplied warning and scope limitation retained. Both PDFs were rendered and inspected. These are specified Chromium viewport/print checks, not physical-device, all-browser, or physical-printer certification.
+
+The actual 21-pair sample JSON/CSV/HTML/SVG downloads were read back independently: all six expected connections and 15 expected non-connections matched the declared nets, records/notes matched, the HTML had all 21 rows, and HTML/SVG retained scope text without scripts or external assets. The separate maximum JSON contains all 496 unique pairs for 32 pins.
+
+Evidence: [CI summary](evidence/ci-summary.json), [browser results](evidence/results.json), [download checks](evidence/download-verification.json), [wide-label measurements](evidence/wide-label-measurements.json), [Japanese desktop](evidence/desktop-ja.png), [English desktop](evidence/desktop-en.png), [390px mobile](evidence/mobile-390.png), [complete print PDF](evidence/print-report.pdf), and [partial-screen print PDF](evidence/partial-screen-print.pdf). Later documentation-only commits receive their own exact-head CI runs.
 
 ## CI configuration
 
@@ -47,3 +53,7 @@ These are **planned assertions, not observed passes** until the workflow runs su
 - Artifact upload: `tests/browser/artifacts/`, including `results.json`, screenshots, actual exports, and print PDF
 
 No paid service, credentials, hardware, or external application data is required. CI uses read-only repository permission. No workflow is marked successful merely because it has been authored.
+
+## Not established
+
+No physical measurements, electrical safety, fault-detection effectiveness, resistance thresholds, hardware compatibility, real-product pinouts, demand, novelty, or market value are established. Manual result entries are not measured evidence. No project license was added.

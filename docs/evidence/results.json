@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "chromiumSandbox": true,
+  "checks": [
+    "Japanese initial render and full pair accounting",
+    "keyboard skip link, language switch, scope acknowledgement",
+    "manual pass, fail, skipped and note records",
+    "filters, empty state, search and reset cancellation",
+    "all four actual exports and versioned JSON record round-trip",
+    "editing locks stale records; cancellation retains them; changed map resets all",
+    "invalid JSON never replaces valid work; mode-switch and repeated generation",
+    "invalid table allocation and repeated add/remove",
+    "device save, reload/restore, cancelled deletion then confirmed deletion",
+    "same file can be imported twice and malformed import is non-destructive",
+    "desktop and responsive layouts contain no viewport overflow",
+    "maximum pin plan and reference labels",
+    "wide ASCII/CJK SVG reference stays inside its label columns",
+    "direct screen print warns about filtered and unapplied content",
+    "blocked storage is a visible recoverable error",
+    "no external application requests and no uncaught errors"
+  ],
+  "uncaughtErrors": []
+}

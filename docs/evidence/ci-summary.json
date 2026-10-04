@@ -1,0 +1,137 @@
+{
+  "sourceCommit": "5bb9c7e60bab2f0a8ace294054cc10d07d440446",
+  "runId": 37170948046,
+  "runURL": "https://github.com/Masanori-Spec/probe-plan/actions/runs/37170948046",
+  "status": "success",
+  "modelMatrix": {
+    "node": [
+      22,
+      24
+    ],
+    "timezone": [
+      "UTC",
+      "Asia/Tokyo"
+    ],
+    "testsPerJob": 95,
+    "jobsPassed": 4
+  },
+  "browser": {
+    "scenariosPassed": 16,
+    "chromiumSandbox": true,
+    "uncaughtErrors": [],
+    "viewportsInspected": [
+      1440,
+      768,
+      390,
+      320
+    ]
+  },
+  "printReview": {
+    "completeReportPages": 2,
+    "partialScreenPages": 1,
+    "clippingOrOverlapFound": false,
+    "scopeAndScreenWarningRetained": true
+  },
+  "maximumDownloadedJSON": {
+    "pins": 32,
+    "uniquePairs": 496,
+    "allUntested": true
+  },
+  "artifactFiles": [
+    {
+      "name": "desktop-en.png",
+      "sha256": "dec75989728e4fd56c4771f30020b16eefac0c7146ac831621ff8408f2fb2a9b",
+      "bytes": 344480
+    },
+    {
+      "name": "desktop-ja.png",
+      "sha256": "64c4dbc613dc4733efab37052f0284aca713884d6ab7be64dd5e935fb7ea37e3",
+      "bytes": 406073
+    },
+    {
+      "name": "download-verification.json",
+      "sha256": "b6963981a4cd995cdf8b4369fad530c8f703898ec120e84eea0be05f604f0c02",
+      "bytes": 211
+    },
+    {
+      "name": "maximum.json",
+      "sha256": "1f76ea20db0aa28b2396e65cf83e13cf07aa99f38c9683a1e1485d47905af44a",
+      "bytes": 56199
+    },
+    {
+      "name": "mobile-320.png",
+      "sha256": "afc5c6b0129d956bdefe252118eefe98cc41944965592686c2b053c13677efba",
+      "bytes": 229453
+    },
+    {
+      "name": "mobile-390.png",
+      "sha256": "197ef3ae5a0386defffd49dcc297436f99c1ed432e5fe9ccde15ed42ee207a2b",
+      "bytes": 232603
+    },
+    {
+      "name": "mobile-768.png",
+      "sha256": "188c0c3e052ffe4eff89b4802f17416ed8fbc29b2be6763d6195531fb93f85d1",
+      "bytes": 304371
+    },
+    {
+      "name": "partial-screen-print.pdf",
+      "sha256": "cc1ca8b2a70ce55e464714dfaf5cfea01efc4ce695074496850eb8b42bd990fb",
+      "bytes": 148489
+    },
+    {
+      "name": "partial-screen-print.png",
+      "sha256": "ecde2cbc112b6d6939c1e58cb9810df90bf5197ca40ebb1ada0f516b7ddd78c9",
+      "bytes": 87784
+    },
+    {
+      "name": "print-preview.png",
+      "sha256": "551bb628ff67cc582a5a2f1747bdf5a6748e6a0fa117fd90ab3caf2fa3659d9c",
+      "bytes": 135396
+    },
+    {
+      "name": "print-report.pdf",
+      "sha256": "01ffe64e7a6f188d282e7acd60bacf0226f3a8650490e6648e38d1b2ad00d3e3",
+      "bytes": 44473
+    },
+    {
+      "name": "results.json",
+      "sha256": "5d1fc267aa00e6cb7d2040693946ea86e3c3fbdf88297ad90a347f8b4ec13e3a",
+      "bytes": 1142
+    },
+    {
+      "name": "sample.csv",
+      "sha256": "06707619d3831d8d8682cb23282379e5d5d6b29d31de4c578093fa307190e485",
+      "bytes": 4490
+    },
+    {
+      "name": "sample.html",
+      "sha256": "9e579ca4e3bc3a53c7e2cce849b33ffcd22bd7416446e48897342aa08bffefd9",
+      "bytes": 8548
+    },
+    {
+      "name": "sample.json",
+      "sha256": "ea2ba884fe0f2dde805ce04e553447add2ba8d20fd9d172f16f0ae2e34b049af",
+      "bytes": 4233
+    },
+    {
+      "name": "sample.svg",
+      "sha256": "c8994b69fd1175c311f770ceacfb619576732d0d7a1d75f2d24c0fc91b23efe6",
+      "bytes": 4261
+    },
+    {
+      "name": "wide-label-measurements.json",
+      "sha256": "ce24e98121e216e1555f2cb7fcfe3aa1cece1f111c7504dffef350fe412e2342",
+      "bytes": 2311
+    },
+    {
+      "name": "wide-label-reference.png",
+      "sha256": "237d03e0227a0f375e5375eea11e2e5be86bf8e4a110597cc6ea4e4224852dce",
+      "bytes": 13348
+    },
+    {
+      "name": "wide-reference.svg",
+      "sha256": "fa2076dc42cad52f9101cfc2cffe91c675115e152803c0a55678c65a86fa734c",
+      "bytes": 3816
+    }
+  ]
+}

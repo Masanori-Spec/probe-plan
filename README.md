@@ -6,6 +6,12 @@ ProbePlan is a local-first, dependency-free browser application for preparing a 
 
 > No mains, batteries, components, energized circuits, or safety-critical use. ProbePlan does not measure anything, control hardware, infer pinouts, choose resistance thresholds, or certify electrical safety. A “User pass” is a person’s entry, not measured evidence.
 
+## Verified preview
+
+![ProbePlan Japanese desktop interface](docs/evidence/desktop-ja.png)
+
+[Hosted verification](https://github.com/Masanori-Spec/probe-plan/actions/runs/37170948046) passed for `5bb9c7e60bab2f0a8ace294054cc10d07d440446`: 95 tests on each of four Node/timezone combinations and all 16 sandboxed Chromium scenarios. Desktop/mobile screenshots, actual JSON/CSV/HTML/SVG downloads, and two print PDFs were reviewed. [Evidence and limits](docs/verification.md).
+
 ## 日本語
 
 ピンとネットの定義から、接続あり・接続なしの**全ペア確認リスト**を生成します。2〜32ピン、最大496ペア。JSONと表形式で編集でき、手入力記録をJSON・CSV・印刷用HTML・ラベル付きSVGへ出力できます。
@@ -115,7 +121,7 @@ Exports are deterministic for a given validated session and export language. JSO
 
 The independent oracle enumerates all set partitions for 2–7 pins and compares every intended partition against every physical-partition model of the same size: **813,296 comparisons**. This verifies the abstract equivalence-relation model only, not the real-world behavior of cables or meters.
 
-Current local evidence: **95 / 95 Node tests passed**, syntax/no-network guard passed, and static build passed. Browser scenarios are authored for CI but have **not been executed in the development environment**. Screenshots, responsive behavior, print rendering, and browser workflow claims still require the sandboxed browser run. See [verification](docs/verification.md).
+Current verified evidence: **95 / 95 Node tests passed** on Node 22/24 in UTC/Asia/Tokyo; syntax/no-network guard and static build passed. **16 / 16 sandboxed Chromium scenarios passed** in hosted CI. Desktop/mobile layouts, wide-label SVGs, actual downloads and print pagination were inspected. This is browser-viewport testing, not physical-device or electrical verification. See [verification](docs/verification.md).
 
 ## Deliberate limits
 
@@ -128,3 +134,5 @@ Current local evidence: **95 / 95 Node tests passed**, syntax/no-network guard p
 - No automatic storage, synchronization, or protection against a malicious user editing records
 
 [Research and comparison](docs/comparison.md) · [Architecture and interview explanation](docs/engineering.md) · [Verification scope](docs/verification.md)
+
+No project license has been selected or added. Publication does not by itself grant a reuse license.

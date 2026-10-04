@@ -1,0 +1,79 @@
+[
+  {
+    "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+    "bboxWidth": 936.39892578125,
+    "computedTextLength": 935.9688110351562,
+    "fontSize": "14.182px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "14.182",
+    "fontFitWidth": "936",
+    "textLengthAttribute": "936",
+    "maximumWidth": 936
+  },
+  {
+    "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+    "bboxWidth": 411.7978210449219,
+    "computedTextLength": 409.9999694824219,
+    "fontSize": "9.318px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "9.318",
+    "fontFitWidth": "410",
+    "textLengthAttribute": "410",
+    "maximumWidth": 410
+  },
+  {
+    "text": "WWWWWWWWWWWWWWWWWWWW",
+    "bboxWidth": 166.76515197753906,
+    "computedTextLength": 165,
+    "fontSize": "7.5px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "7.500",
+    "fontFitWidth": "165",
+    "textLengthAttribute": "165",
+    "maximumWidth": 165
+  },
+  {
+    "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+    "bboxWidth": 188.18995666503906,
+    "computedTextLength": 188,
+    "fontSize": "7.121px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "7.121",
+    "fontFitWidth": "188",
+    "textLengthAttribute": "188",
+    "maximumWidth": 188
+  },
+  {
+    "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+    "bboxWidth": 188.18995666503906,
+    "computedTextLength": 188,
+    "fontSize": "7.121px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "7.121",
+    "fontFitWidth": "188",
+    "textLengthAttribute": "188",
+    "maximumWidth": 188
+  },
+  {
+    "text": "端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端端",
+    "bboxWidth": 410.0000305175781,
+    "computedTextLength": 410,
+    "fontSize": "7.765px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "7.765",
+    "fontFitWidth": "410",
+    "textLengthAttribute": "410",
+    "maximumWidth": 410
+  },
+  {
+    "text": "端端端端端端端端端端端端端端端端端端端端端端端端",
+    "bboxWidth": 165,
+    "computedTextLength": 165,
+    "fontSize": "6.25px",
+    "fontFamily": "Arial, sans-serif",
+    "fontAttribute": "6.250",
+    "fontFitWidth": "165",
+    "textLengthAttribute": "165",
+    "maximumWidth": 165
+  }
+]
